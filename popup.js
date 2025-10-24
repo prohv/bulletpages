@@ -18,8 +18,11 @@ document.getElementById("summarise").addEventListener("click", async () => {
             }
             
             chrome.tabs.sendMessage(tabs[0].id, {action: "getArticleContent"}, async (response) => {
+                if(chrome.runtime.lastError){
+                    result.textContent = "Please Refresh the page and Try again";
+                    return;
+                }
                 try{
-                    
                     const controller = new AbortController();
                     const timeoutId = setTimeout(() => controller.abort(), 30000);
                     
@@ -35,7 +38,7 @@ document.getElementById("summarise").addEventListener("click", async () => {
                     if (error.name === 'AbortError') {
                         result.textContent = "Request timed out. Please try again.";
                     } else {
-                        result.textContent = "Failed to generate summary: " + error.message + " Try Refreshing the Page.";
+                        result.textContent = "Failed to generate summary: " + error.message;
                     }
                 }
             });
