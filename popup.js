@@ -35,7 +35,7 @@ document.getElementById("summarise").addEventListener("click", async () => {
                     if (error.name === 'AbortError') {
                         result.textContent = "Request timed out. Please try again.";
                     } else {
-                        result.textContent = "Failed to generate summary: " + error.message;
+                        result.textContent = "Failed to generate summary: " + error.message + " Try Refreshing the Page.";
                     }
                 }
             });
@@ -111,7 +111,7 @@ async function getGeminiApiResponse(text, type, geminiApiKey, controller){
     };
 
     const res = await fetch(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=" + geminiApiKey,
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + geminiApiKey,
         {
             method: "POST",
             headers: {
