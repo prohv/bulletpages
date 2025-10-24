@@ -22,10 +22,8 @@ BulletPages is a powerful Chrome extension that transforms long, cluttered web p
 
 ## ⚙️ Setup
 
-1. 🖱️ Click on the BulletPages extension icon in the Chrome toolbar
-2. 🔑 Click the "Gemini API Key" button
-3. 🆔 Enter your Gemini API key (get one free from [Google AI Studio](https://aistudio.google.com/))
-4. 💾 Click "Save API Key"
+1. 🆔 Enter your Gemini API key (get one free from [Google AI Studio](https://aistudio.google.com/))
+2. 💾 Click "Save API Key"
 
 ## 🚀 Usage
 
