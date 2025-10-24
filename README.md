@@ -51,12 +51,14 @@ BulletPages is a powerful Chrome extension that transforms long, cluttered web p
 ## 🛠️ Technical Details
 
 - 🏗️ **Built with**: Manifest V3, JavaScript, HTML, CSS
-- ☁️ **AI Model**: Google Gemini 2.5 Flash
+- ☁️ **AI Model**: Google Gemini 2.0 Flash
 - 📡 **API**: Google Generative Language API
 - 🧩 **Permissions**: 
   - `scripting`: To extract content from web pages
   - `activeTab`: To access the currently active tab
   - `storage`: To securely store your API key
+- ✨ **Host Permission**:
+  - `https://generativelanguage.googleapis.com/*`: to connet to Gemini API
 
 ## 🤝 Contributing
 
